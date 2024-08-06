@@ -33,7 +33,7 @@ asyncButton:
     waiting: Restarting&hellip;
 
 harvester:
-  productLabel: 'Harvester'
+  productLabel: 'Orion'
   modal:
     backup:
       success: 'Backup { backUpName } has been initiated.'
@@ -290,7 +290,7 @@ harvester:
 
   dashboard:
     label: Dashboard
-    header: "Harvester Cluster: {cluster}"
+    header: "Orion Cluster: {cluster}"
     hardwareResourceGauge:
       cpu: CPU
       memory: Memory
@@ -917,7 +917,7 @@ harvester:
       chooseFile: Please select to upload an image.
       checksum: Checksum
     harvesterMonitoring:
-      label: Harvester Monitoring
+      label: Orion Monitoring
       section:
         prometheus: Prometheus
         prometheusNodeExporter: Prometheus Node Exporter
@@ -940,7 +940,7 @@ harvester:
     networkData: Network Data
  
   support:
-    title: Harvester Support
+    title: Orion Support
     kubeconfig:
       title: Download KubeConfig
       titleDescription: Download kubeconfig for debugging.
