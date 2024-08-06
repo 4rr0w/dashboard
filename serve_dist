@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+# Step 1: Checkin if rebuilding is required
+if [[ "$1" == "--rebuild" ]]; then
+    #Build the UI using yarn
+    echo "Option --rebuild detected. Rebuilding dist"
+    ./scripts/build-embedded
+fi
+
+# Start node server to serve the tar file
+echo "Starting tar server..."
+node tar_server.js
