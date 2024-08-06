@@ -90,7 +90,7 @@ describe('class Namespace', () => {
     it.each([
       ['c-cluster-product-projectsnamespaces', true],
       ['c-cluster-product-resource', false],
-    ])('should return the name %p if is Rancher (%p)', (name, isRancher) => {
+    ])('should return the name %p if is Orion (%p)', (name, isRancher) => {
       const namespace = new Namespace({});
 
       jest.spyOn(namespace, '$rootGetters', 'get').mockReturnValue({

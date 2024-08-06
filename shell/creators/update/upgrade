@@ -2,7 +2,7 @@
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-echo "Upgrading Rancher Shell"
+echo "Upgrading Orion Shell"
 
 # Get the version number from the package.json file
 VERSION=$(node -p -e "require('${SCRIPT_DIR}/package.json').version")

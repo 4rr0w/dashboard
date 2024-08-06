@@ -33,7 +33,7 @@ describe('getters', () => {
       expect(result).toStrictEqual(expectation);
     });
 
-    it('should return Rancher system namespaces', () => {
+    it('should return Orion system namespaces', () => {
       const clusterId = 'my-cluster';
       const namespaceId = 'my-rancher-system-namespace';
       const expectation = { [namespaceId]: true };
@@ -57,7 +57,7 @@ describe('getters', () => {
       expect(result).toStrictEqual(expectation);
     });
 
-    it('should filter Rancher system namespaces', () => {
+    it('should filter Orion system namespaces', () => {
       const clusterId = 'my-cluster';
       const namespaceId = 'my-rancher-system-namespace';
       const expectation = { };

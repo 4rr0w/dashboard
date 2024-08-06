@@ -1,6 +1,6 @@
 {
   "name": "@rancher/create-pkg",
-  "description": "Rancher UI Package generator",
+  "description": "Orion UI Package generator",
   "version": "0.0.1",
   "license": "Apache-2.0",
   "author": "SUSE",

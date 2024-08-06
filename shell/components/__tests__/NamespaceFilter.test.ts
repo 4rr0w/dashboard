@@ -235,6 +235,6 @@ describe('component: NamespaceFilter', () => {
       expect(action).toHaveBeenCalledWith(actionName, value);
     });
 
-    it.todo('should generate the options based on the Rancher resources');
+    it.todo('should generate the options based on the Orion resources');
   });
 });

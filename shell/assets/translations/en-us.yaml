@@ -525,7 +525,7 @@ authConfig:
     tokenEndpoint: Token Endpoint
     authEndpoint: Auth Endpoint
     reply:
-      info: 'Azure AD requires a whitelisted URL for your Rancher server before beginning this setup. Please ensure that the following URL is set in the Reply URL section of your Azure Portal. Please note that it may take up to 5 minutes for the whitelisted URL to propagate.'
+      info: 'Azure AD requires a whitelisted URL for your Orion server before beginning this setup. Please ensure that the following URL is set in the Reply URL section of your Azure Portal. Please note that it may take up to 5 minutes for the whitelisted URL to propagate.'
       label: Reply URL
     updateEndpoint:
       button: Update Endpoint
@@ -534,7 +534,7 @@ authConfig:
         linkText: 'Update it here.'
       modal:
         title: Are you sure? This update is irreversible.
-        body: '<p><b>You may need to make some additional changes</b>. Please ensure the Azure AD app has the Directory.Read.All <b>Application</b> permission added to Microsoft Graph.<br> If any endpoints were customized while configuring Azure AD authentication in Rancher, they will not be automatically updated. </p>'
+        body: '<p><b>You may need to make some additional changes</b>. Please ensure the Azure AD app has the Directory.Read.All <b>Application</b> permission added to Microsoft Graph.<br> If any endpoints were customized while configuring Azure AD authentication in Orion, they will not be automatically updated. </p>'
   oidc:
     oidc: Configure an OIDC account
     keycloakoidc: Configure a Keycloak OIDC account

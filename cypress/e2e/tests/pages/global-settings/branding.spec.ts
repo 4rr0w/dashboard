@@ -6,8 +6,8 @@ import ProductNavPo from '~/cypress/e2e/po/side-bars/product-side-nav.po';
 
 const settings = {
   privateLabel: {
-    original: 'Rancher',
-    new:      'Rancher e2e'
+    original: 'Orion',
+    new:      'Orion e2e'
   },
   primaryColor: {
     original: '#3d98d3', // 3D98D3

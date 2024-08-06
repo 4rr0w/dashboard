@@ -86,7 +86,7 @@ harvester:
       url: Issue URL
       description: Description
       requiredDesc: Description is required!
-      titleDescription: Collect system-related log in Harvester, to help with troubleshooting and support.
+      titleDescription: Collect system-related log in Orion, to help with troubleshooting and support.
     hotplug:
       success: 'Volume { diskName } is mounted to the VM { vm }.'
       title: Add Volume
@@ -742,15 +742,15 @@ harvester:
     selectExisting: Select Existing Image
     createRepository: Creating Upgrade Repository
     succeeded: Succeeded
-    releaseTip: Please read the upgrade documentation carefully. You can view details on the <a href="{url}" target="_blank">Harvester Release Note</a>.
-    checkReady: I have read and understood the upgrade content related to this Harvester version.
+    releaseTip: Please read the upgrade documentation carefully. You can view details on the <a href="{url}" target="_blank">Orion Release Note</a>.
+    checkReady: I have read and understood the upgrade content related to this Orion version.
     pending: Pending
     repoInfo:
       upgradeStatus: Upgrade Status
       os: OS
       kubernetes: Kubernetes
       monitoringChart: Monitoring Chart
-      harvesterChart: Harvester Chart
+      harvesterChart: Orion Chart
       success: Success
       fail:  Fail
       ongoing: on-going
@@ -759,7 +759,7 @@ harvester:
     dismissMessage: Dismiss it
     upgradeInfo:
       warning: WARNING
-      doc: Before you upgrade to the newer Harvester version, you must perform the required <a href="https://docs.harvesterhci.io/v1.0/upgrade/automatic/" target="_blank"> pre-upgrade checks </a>for your cluster. Complete only those tasks that apply to your environment.
+      doc: Before you upgrade to the newer Orion version, you must perform the required <a href="https://docs.harvesterhci.io/v1.0/upgrade/automatic/" target="_blank"> pre-upgrade checks </a>for your cluster. Complete only those tasks that apply to your environment.
       tip: Failure to perform these checks may result in a failed upgrade or hitting known issues that require a manual workaround fix.
       moreNotes: For more details about the release notes, please visit - 
 
@@ -785,7 +785,7 @@ harvester:
         actionLabel: Test connection
         waitingLabel: Testing connection...
         successLabel: Connection tested
-        successMessage: 'Harvester can successfully connect to the endpoint {endpoint}'
+        successMessage: 'Orion can successfully connect to the endpoint {endpoint}'
     restore:
       backup: Backup
       deletePreviousVolumes: Delete Previous Volumes
@@ -882,7 +882,7 @@ harvester:
     autoRotateRKE2Certs:
       expiringInHours: Expiring in
     httpProxy:
-      warning: 'WARNING: <br/> If you configure "http-proxy" and "https-proxy", you must also put Harvester node&apos;s CIDR into "no-proxy", otherwise the Harvester cluster will be broken.'
+      warning: 'WARNING: <br/> If you configure "http-proxy" and "https-proxy", you must also put Orion node&apos;s CIDR into "no-proxy", otherwise the Orion cluster will be broken.'
     supportBundleImage:
       imagePullPolicy: Pull Policy
       repo: Repository
@@ -929,7 +929,7 @@ harvester:
         retention: How long to retain metrics
         retentionSize: Maximum size of metrics
     clusterRegistrationUrl:
-      message: To completely unset the imported Harvester cluster, please also remove it on the Rancher dashboard UI via the <code> Virtualization Management </code> page.
+      message: To completely unset the imported Orion cluster, please also remove it on the Rancher dashboard UI via the <code> Virtualization Management </code> page.
     ntpServers:
       isNotIPV4: The address you entered is not IPv4 or host. Please enter a valid IPv4 address or a host address.
       isDuplicate: There are duplicate NTP server configurations.
@@ -952,7 +952,7 @@ harvester:
         title: Access Embedded Longhorn UI
         titleDescription: We only support to use the embedded Longhorn UI for debugging and validation purpose.
     community:
-      learnMore: Find out more about SUSE Harvester support
+      learnMore: Find out more about SUSE Orion support
       pricing: Contact us for pricing
 
   namespace:
@@ -1117,16 +1117,16 @@ harvester:
   
   addons:
     descriptions:
-      'harvester-system/vm-import-controller': vm-import-controller is an addon to help migrate VM workloads from other source clusters to an existing Harvester cluster.
-      'harvester-system/pcidevices-controller': pcidevices-controller is an addon to help discover PCI devices for nodes in your cluster and allow users to prepare devices for PCI Passthrough, for use with Harvester VM and guest Clusters.
-      'cattle-logging-system/rancher-logging': rancher-logging is an addon to collect versatile logs, events and audits from the Harvester cluster and route them to many kinds of servers based on flows.
+      'harvester-system/vm-import-controller': vm-import-controller is an addon to help migrate VM workloads from other source clusters to an existing Orion cluster.
+      'harvester-system/pcidevices-controller': pcidevices-controller is an addon to help discover PCI devices for nodes in your cluster and allow users to prepare devices for PCI Passthrough, for use with Orion VM and guest Clusters.
+      'cattle-logging-system/rancher-logging': rancher-logging is an addon to collect versatile logs, events and audits from the Orion cluster and route them to many kinds of servers based on flows.
       'harvester-system/rancher-vcluster': rancher-vcluster deploys a vcluster with rancher installed.
-      'cattle-monitoring-system/rancher-monitoring': rancher-monitoring is an addon to collect Harvester cluster and VM metrics, view them on the embedded dashboard, and send alert(s) to remote servers.
-      'vm-import-controller': vm-import-controller is an addon to help migrate VM workloads from other source clusters to an existing Harvester cluster.
-      'pcidevices-controller': pcidevices-controller is an addon to help discover PCI devices for nodes in your cluster and allow users to prepare devices for PCI Passthrough, for use with Harvester VM and guest Clusters.
-      'nvidia-driver-toolkit': 'nvidia-driver-toolkit is an addon to enable vGPU devices and assign them to Harvester VMs.'
-      'rancher-logging': rancher-logging is an addon to collect versatile logs, events and audits from the Harvester cluster and route them to many kinds of servers based on flows.
-      'rancher-monitoring': rancher-monitoring is an addon to collect Harvester cluster and VM metrics, view them on the embedded dashboard, and send alert(s) to remote servers.
+      'cattle-monitoring-system/rancher-monitoring': rancher-monitoring is an addon to collect Orion cluster and VM metrics, view them on the embedded dashboard, and send alert(s) to remote servers.
+      'vm-import-controller': vm-import-controller is an addon to help migrate VM workloads from other source clusters to an existing Orion cluster.
+      'pcidevices-controller': pcidevices-controller is an addon to help discover PCI devices for nodes in your cluster and allow users to prepare devices for PCI Passthrough, for use with Orion VM and guest Clusters.
+      'nvidia-driver-toolkit': 'nvidia-driver-toolkit is an addon to enable vGPU devices and assign them to Orion VMs.'
+      'rancher-logging': rancher-logging is an addon to collect versatile logs, events and audits from the Orion cluster and route them to many kinds of servers based on flows.
+      'rancher-monitoring': rancher-monitoring is an addon to collect Orion cluster and VM metrics, view them on the embedded dashboard, and send alert(s) to remote servers.
       'rancher-vcluster': rancher-vcluster deploys a vcluster with rancher installed.
       'harvester-seeder': harvester-seeder is an addon that uses ipmi and redfish to discover hardware information and perform out-of-band operations.
       'harvester-system/harvester-seeder': harvester-seeder is an addon that uses ipmi and redfish to discover hardware information and perform out-of-band operations.
@@ -1267,7 +1267,7 @@ harvester:
     vGpuDevices: vGPU Devices
     showMore: Show More
     parentSriov: Filter By Parent SR-IOV GPU
-    noPermission: Please contact system admin to add Harvester addons first
+    noPermission: Please contact system admin to add Orion addons first
     goSetting:
       prefix: The nvidia-driver-toolkit addon is not enabled, click
       middle: here
@@ -1275,7 +1275,7 @@ harvester:
 
   vgpu:
     label: vGPU Devices
-    noPermission: Please contact system admin to add Harvester addons first
+    noPermission: Please contact system admin to add Orion addons first
     goSetting:
       prefix: The nvidia-driver-toolkit addon is not enabled, click
       middle: here

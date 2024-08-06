@@ -21,6 +21,6 @@ describe('Page Actions', () => {
 
     homePage
       .title()
-      .should('eq', 'Welcome to Rancher');
+      .should('eq', 'Welcome to Orion');
   });
 });

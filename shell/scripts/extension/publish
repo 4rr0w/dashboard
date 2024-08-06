@@ -107,7 +107,7 @@ fi
 IS_SHELL=$(grep "\"@rancher/shell" package.json -c)
 
 if [ "${IS_SHELL}" -ne 1 ]; then
-  echo -e "${YELLOW}Current folder does not appear to contain Rancher Extensions${RESET}"
+  echo -e "${YELLOW}Current folder does not appear to contain Orion Extensions${RESET}"
   exit 1
 fi
 

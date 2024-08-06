@@ -1,6 +1,6 @@
 {
   "name": "dashboard-storybook",
-  "description": "Rancher Dashboard Storybook",
+  "description": "Orion Dashboard Storybook",
   "repository": "https://github.com/rancher/dashboard",
   "license": "Apache-2.0",
   "author": "SUSE",

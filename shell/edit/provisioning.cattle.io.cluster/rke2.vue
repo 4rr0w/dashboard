@@ -2769,7 +2769,7 @@ export default {
           label-key="cluster.tabs.registry"
         >
           <div class="row">
-            <h3>Registry for Rancher System Container Images</h3>
+            <h3>Registry for Orion System Container Images</h3>
           </div>
           <div class="row">
             <div class="col span-12">

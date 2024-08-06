@@ -5,11 +5,11 @@ export const STANDARD = 1;
 export const CUSTOM = 2;
 export const DOCS_BASE = 'https://rancher.com/docs/rancher/v2.7/en';
 
-const STANDARD_VENDOR = 'Rancher';
+const STANDARD_VENDOR = 'Orion';
 const STANDARD_PRODUCT = 'Explorer';
 const CUSTOM_VENDOR = {
-  suse: 'Rancher Prime',
-  csp:  'SUSE Rancher'
+  suse: 'Orion Prime',
+  csp:  'SUSE Orion'
 };
 
 let mode = STANDARD;

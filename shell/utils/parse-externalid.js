@@ -5,7 +5,7 @@ const EXTERNAL_ID = {
   ID_SEPARATOR:      ':',
   KIND_ALL:          'containers',
   SYSTEM_CATEGORIES: [
-    'Rancher services'
+    'Orion services'
   ],
   CATALOG_DEFAULT_GROUP: 'library',
 };

@@ -10,7 +10,7 @@ describe('User can logout of Rancher', () => {
     cy.login();
   });
 
-  it('Can logout of Rancher successfully', () => {
+  it('Can logout of Orion successfully', () => {
     /*
     Logout of Rancher Dashboard
     Verify user lands on login page after logging out

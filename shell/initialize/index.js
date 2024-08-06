@@ -108,7 +108,7 @@ async function createApp(ssrContext, config = {}) {
     head: {
       title: 'dashboard',
       meta:  [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }, {
-        hid: 'description', name: 'description', content: 'Rancher Dashboard'
+        hid: 'description', name: 'description', content: 'Orion Dashboard'
       }],
       style:  [],
       script: []

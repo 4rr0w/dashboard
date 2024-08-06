@@ -68,12 +68,12 @@ export const parameters = {
   darkMode: {
     dark: {
       ...themes.dark,
-      brandTitle: 'Rancher Storybook',
+      brandTitle: 'Orion Storybook',
       brandImage: 'dark/rancher-logo.svg'
     },
     light: {
       ...themes.normal,
-      brandTitle: 'Rancher Storybook',
+      brandTitle: 'Orion Storybook',
       brandImage: 'rancher-logo.svg'
     },
     darkClass: 'theme-dark',
