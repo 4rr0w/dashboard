@@ -722,7 +722,7 @@ export default {
             v-clean-tooltip="{content: harvesterVersion, placement: 'top'}"
             class="clip text-muted ml-5"
           >
-            (Harvester-{{ harvesterVersion }})
+            (Orion-{{ harvesterVersion }})
           </span>
         </div>
       </nav>

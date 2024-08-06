@@ -130,7 +130,7 @@ export default class HciCluster extends ProvCluster {
 
         pkgName = jsName?.split('.umd.min.js')[0];
       } else {
-        throw new Error('Harvester cluster requested the plugin at `ui-plugin-index` is used, however did not provide a value for it');
+        throw new Error('Orion cluster requested the plugin at `ui-plugin-index` is used, however did not provide a value for it');
       }
     }
 
