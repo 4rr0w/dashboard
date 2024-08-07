@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+./scripts/build-embedded
+cp ./dist/build.tar.gz ./build.tar.gz

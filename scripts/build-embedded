@@ -16,7 +16,7 @@ yarn --pure-lockfile install
 source scripts/version
 echo "BRANCH: ${COMMIT_BRANCH:-<none>}"
 echo "TAG: ${GIT_TAG:-<none>}"
-DIR=${GIT_TAG:-$COMMIT_BRANCH}
+DIR=build
 
 OUTPUT_DIR=dist/${DIR}-embedded
 
