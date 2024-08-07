@@ -163,7 +163,7 @@ nav:
     Fleet: Fleet
     K3s: K3s
     Networking: Networking
-    Rancher: Rancher
+    Rancher: Orion
     RBAC: RBAC
     Scheduling: Scheduling
     Storage: Storage
@@ -204,7 +204,7 @@ nav:
 product:
   apps: Apps
   auth: Users & Authentication
-  backup: Rancher Backups
+  backup: Orion Backups
   cis: CIS Benchmark
   ecm: Cluster Manager
   explorer: Cluster Explorer
@@ -220,7 +220,7 @@ product:
   mcapps: Global Configuration
   neuvector: NeuVector
   harvesterManager: Virtualization Management
-  rancher: Rancher
+  rancher: Orion
   legacy: Legacy
   uiplugins: Extensions
   elemental: OS Management
@@ -264,7 +264,7 @@ about:
     cli: CLI
     helm: Helm
     machine: Machine
-    rancher: Rancher
+    rancher: Orion
     releaseNotes: 'View release notes'
   os:
     mac: macOS
@@ -538,7 +538,7 @@ authConfig:
   oidc:
     oidc: Configure an OIDC account
     keycloakoidc: Configure a Keycloak OIDC account
-    rancherUrl: Rancher URL
+    rancherUrl: Orion URL
     clientId: Client ID
     clientSecret: Client Secret
     customEndpoint:
@@ -730,7 +730,7 @@ backupRestoreOperator:
     label: Delete Timeout
     tip: Seconds to wait for a resource delete to succeed before removing finalizers to force deletion.
   deployment:
-    rancherNamespace: Rancher ResourceSet Namespace
+    rancherNamespace: Orion ResourceSet Namespace
     size: Size
     storage:
       label: Default Storage Location
@@ -748,19 +748,19 @@ backupRestoreOperator:
       warning: 'This {type} does not have its reclaim policy set to "Retain".  Your backups may be lost if the volume is changed or becomes unbound.'
   encryption: Encryption
   encryptionConfigName:
-    backuptip: 'Any secret in the <code>cattle-resource-system</code> namespace that has an <code>encryption-provider-config.yaml</code> key. <br/>The contents of this file are necessary to perform a restore from this backup, and are not stored by Rancher Backup.'
+    backuptip: 'Any secret in the <code>cattle-resource-system</code> namespace that has an <code>encryption-provider-config.yaml</code> key. <br/>The contents of this file are necessary to perform a restore from this backup, and are not stored by Orion Backup.'
     label: Encryption Config Secret
     options:
       none: Store the contents of the backup unencrypted
       secret: 'Encrypt backups using an <a target="_blank" rel="noopener noreferrer nofollow" href="https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/#understanding-the-encryption-at-rest-configuration">Encryption Config Secret</a> (Recommended)'
     restoretip: 'If the backup was performed with encryption enabled, a secret containing the same encryption-provider-config should be used during restore.'
-    warning: 'The contents of this file are necessary to perform a restore from this backup, and are not stored by Rancher Backup.'
+    warning: 'The contents of this file are necessary to perform a restore from this backup, and are not stored by Orion Backup.'
   lastBackup: Last Backup
   nextBackup: Next Backup
   noResourceSet: You must define a ResourceSet in this namespace to create a backup CR.
   prune:
     label: Prune
-    tip: Delete the resources managed by Rancher that are not present in the backup. (Recommended)
+    tip: Delete the resources managed by Orion that are not present in the backup. (Recommended)
   resourceSetName: Resource Set
   restoreFrom:
     default: The default storage target
@@ -817,7 +817,7 @@ catalog:
       label: Container Registry
       tooltip: Container images are pulled from the Cluster Container Registry or, failing that, the System Container Registry Setting. To change this default behavior enter or update the registry here
       custom:
-        checkBoxLabel: Container Registry for Rancher System Container Images
+        checkBoxLabel: Container Registry for Orion System Container Images
         inputLabel: Container Registry
         placeholder: Registry domain and ports, ex. registry.io:5000
     header:
@@ -979,7 +979,7 @@ catalog:
       rancher-charts: '{vendor}'
       rancher-partner-charts: Partners
       rancher-rke2-charts: RKE2
-      rancher-ui-plugins: Rancher Extensions
+      rancher-ui-plugins: Orion Extensions
 
     target:
       git: Git repository containing Helm chart or cluster template definitions
@@ -1139,7 +1139,7 @@ cluster:
       linuxDetail: Run this command on each of the existing Linux machines you want to register.
       windowsDetail: Run this command in PowerShell on each of the existing Windows machines you want to register. Windows nodes can only be workers.
       windowsNotReady: The cluster must be up and running with Linux etcd, control plane, and worker nodes before the registration command for adding Windows workers will display.
-      windowsWarning: Workload pods, including some deployed by Rancher charts, will be scheduled on both Linux and Windows nodes by default. Edit NodeSelector in the chart to direct them to be placed onto a compatible node.
+      windowsWarning: Workload pods, including some deployed by Orion charts, will be scheduled on both Linux and Windows nodes by default. Edit NodeSelector in the chart to direct them to be placed onto a compatible node.
       windowsDeprecatedForRKE1: Windows support is being deprecated for RKE1. We suggest migrating to RKE2.
       insecure: "Insecure: Select this to skip TLS verification if your server has a self-signed certificate."
   credential:
@@ -1318,7 +1318,7 @@ cluster:
         toolTip: SSH user to login with the selected OS image.
   haveOneOwner: There must be at least one member with the Owner role.
   import:
-    warningBanner: 'You should not import a cluster which has already been connected to another instance of Rancher as it will lead to data corruption.'
+    warningBanner: 'You should not import a cluster which has already been connected to another instance of Orion as it will lead to data corruption.'
     commandInstructions: 'Run the <code>kubectl</code> command below on an existing Kubernetes cluster running a supported Kubernetes version to import it into {vendor}:'
     commandInstructionsInsecure: 'If you get a &quot;certificate signed by unknown authority&quot; error, your {vendor} installation has a self-signed or untrusted SSL certificate.  Run the command below instead to bypass the certificate verification:'
     clusterRoleBindingInstructions: 'If you get permission errors creating some of the resources, your user may not have the <code>cluster-admin</code> role.  Use this command to apply it:'
@@ -1384,7 +1384,7 @@ cluster:
       managedDisksSize:
         label: Managed Disk Size
       nsg:
-        help: When using a Rancher managed or providing an existing NSG, all nodes using this template will use the supplied NSG. If no NSG is provided, a new NSG will be created for each node.
+        help: When using a Orion managed or providing an existing NSG, all nodes using this template will use the supplied NSG. If no NSG is provided, a new NSG will be created for each node.
         label: Network Security Group
       openPort:
         add: Add Port
@@ -1627,11 +1627,11 @@ cluster:
       nodeAffinity: Node Affinity
     banners:
       advanced: These are advanced configuration options. Generally, they should be left as-is.
-      tolerations: Additional Pod Tolerations will be added to the default Tolerations applied by Rancher.
+      tolerations: Additional Pod Tolerations will be added to the default Tolerations applied by Orion.
       limits: Pod Requests and Limits do not have a default configuration.
       windowsCompatibility: "We do not recommended removing the Node Affinity rule that prevents the <b>agent</b> from running on Windows nodes as this is not a supported configuration."
     affinity:
-      default: Use default affinity rules defined by Rancher
+      default: Use default affinity rules defined by Orion
       custom: Use custom affinity rules
   advanced:
     argInfo:
@@ -1741,8 +1741,8 @@ cluster:
       searchPlaceholder: Start typing to search
       noResults: No results found
   privateRegistry:
-    label: Enable cluster scoped container registry for Rancher system container images
-    description: "If enabled, Rancher will pull container images from this registry during cluster provisioning. By default, Rancher will also use this registry when installing Rancher's official Helm chart apps. If the cluster scoped registry is disabled, system images are pulled from the System Default Registry in the global settings."
+    label: Enable cluster scoped container registry for Orion system container images
+    description: "If enabled, Orion will pull container images from this registry during cluster provisioning. By default, Orion will also use this registry when installing Orion's official Helm chart apps. If the cluster scoped registry is disabled, system images are pulled from the System Default Registry in the global settings."
     docsLinkRke2: "For help configuring private registry mirrors, see the RKE2 <a href=\"https://docs.rke2.io/install/containerd_registry_configuration/\" target=\"_blank\">documentation.</a>"
     docsLinkK3s: "For help configuring private registry mirrors, see the K3s <a href=\"https://docs.k3s.io/installation/private-registry\" target=\"_blank\">documentation.</a>"
   provider:
@@ -1816,7 +1816,7 @@ cluster:
     register-custom: Import any Kubernetes cluster
   rke2:
     banner:
-      psaChange: PSACT is now set to Rancher default automatically
+      psaChange: PSACT is now set to Orion default automatically
       cisOverride: Changing this setting may affect cluster security as it overrides default CIS settings
       cisUnsupported: The selected Kubernetes Version no longer supports CIS Profile "{cisProfile}". Please select a supported profile. We recommend reviewing the <a href="https://docs.rke2.io/security/hardening_guide" target="_blank" rel="noopener noreferrer nofollow">documentation</a> to evaluate the impact of changing the CIS Profile.
     modal:
@@ -3063,7 +3063,7 @@ members:
       label: Custom
       description: Choose individual roles for this user.
       lockedRole: This role is locked.
-  localClusterWarning: "Caution: This is the cluster that Rancher is using as a data store. Only administrators should be given write access to this cluster. Users with write access to this cluster can use it to grant themselves access to any part of this installation."
+  localClusterWarning: "Caution: This is the cluster that Orion is using as a data store. Only administrators should be given write access to this cluster. Users with write access to this cluster can use it to grant themselves access to any part of this installation."
   noRolesAssigned: There are no users assigned to this project.
 
 membershipEditor:
@@ -3112,7 +3112,7 @@ monitoring:
     tip: 'Creates <code>monitoring-admin</code>, <code>monitoring-edit</code>, and <code>monitoring-view</code> ClusterRoles that can be assigned to users to provide permissions to CRDs installed by the Monitoring chart.'
   etcdNodeDirectory:
     label: etcd Node Certificate Directory
-    tooltip: 'For clusters that use RancherOS for the etcd nodes, this option should be set to <pre class=''inline-block m-0''>/opt/rke/etc/kubernetes/ssl</pre>. Hybrid environments that require specifying multiple certificate directories (e.g. an etcd plane composed of both RancherOS and Ubuntu hosts) are not supported.'
+    tooltip: 'For clusters that use OrionOS for the etcd nodes, this option should be set to <pre class=''inline-block m-0''>/opt/rke/etc/kubernetes/ssl</pre>. Hybrid environments that require specifying multiple certificate directories (e.g. an etcd plane composed of both OrionOS and Ubuntu hosts) are not supported.'
   grafana:
     storage:
       annotations: PVC Annotations
@@ -3997,7 +3997,7 @@ inactivity:
 
 # Rancher Extensions
 plugins:
-  incompatibleDisclaimer: "The latest version of this extension ({ version }) is not compatible with the current Rancher version ({ rancherVersion })."
+  incompatibleDisclaimer: "The latest version of this extension ({ version }) is not compatible with the current Orion version ({ rancherVersion })."
   labels:
     builtin: Built-in
     experimental: Experimental
@@ -4016,7 +4016,7 @@ plugins:
     generic: Extension error
     api: This Extension is not compatible with the Extensions API
     host: This Extension is not compatible with this application
-    version: This Extension is not compatible with this version of Rancher
+    version: This Extension is not compatible with this version of Orion
     load: An error occurred loading the code for this Extension
   success:
     title: Loaded extension {name}
@@ -4033,7 +4033,7 @@ plugins:
     detail: Detail
     versions: Versions
     versionError: Could not load version information
-    requiresVersion: "Requires Rancher {version}"
+    requiresVersion: "Requires Orion {version}"
   empty:
     all: Extensions are neither installed nor available
     available: No Extensions available
@@ -4122,17 +4122,17 @@ plugins:
     install:
       title: Enable Extension Support?
       prompt: This will install the Helm charts to enable Extension support
-      airgap: The Rancher Extensions Repository provides extensions published by Rancher. Un-check if your Rancher installation is air-gapped
-      addRancherRepo: Add the Rancher Extension Repository
+      airgap: The Orion Extensions Repository provides extensions published by Orion. Un-check if your Orion installation is air-gapped
+      addRancherRepo: Add the Orion Extension Repository
     remove:
       label: Disable Extension Support
       title: Disable Extension Support?
       prompt: This will un-install the Helm charts that enable Extension support
       registry:
-        title: Remove the Rancher Extensions Repository
-        prompt: The Rancher Extensions Repository provides extensions published by Rancher
+        title: Remove the Orion Extensions Repository
+        prompt: The Orion Extensions Repository provides extensions published by Orion
       crd:
-        title: Remove the Rancher Extensions Custom Resource Definition
+        title: Remove the Orion Extensions Custom Resource Definition
         prompt: There are one or more extensions installed - removing the CRD will require you to manually reinstall these extensions if you subsequently re-enable extensions support.
 podSecurityAdmission:
   name: Pod Security Admission
@@ -4191,7 +4191,7 @@ prefs:
   advFeatures:
     title: Advanced Features
     viewInApi: Enable "View in API"
-    allNamespaces: Show system Namespaces managed by Rancher (not intended for editing or deletion)
+    allNamespaces: Show system Namespaces managed by Orion (not intended for editing or deletion)
     themeShortcut: Enable Dark/Light Theme keyboard shortcut toggle (shift+T)
     pluginDeveloper: Enable Extension developer features
   hideDesc:
@@ -4363,7 +4363,7 @@ prometheusRule:
 
 promptForceRemove:
   modalTitle: Are you sure?
-  removeWarning: "There was an issue with deleting underlying infrastructure. If you proceed with this action, the Machine <b>{nameToMatch}</b> will be deleted from Rancher only. It's highly recommended to manually delete any referenced infrastructure."
+  removeWarning: "There was an issue with deleting underlying infrastructure. If you proceed with this action, the Machine <b>{nameToMatch}</b> will be deleted from Orion only. It's highly recommended to manually delete any referenced infrastructure."
   forceDelete: Force Delete
   confirmName: "Enter in the pool name below to confirm:"
   podRemoveWarning: "Force deleting pods does not wait for confirmation that the pod's processes have been terminated. This may result in <strong>data corruption or inconsistencies</strong>"
@@ -4461,7 +4461,7 @@ rbac:
         noApiGroupClusterScope: Core K8s API, Cluster Scoped
         noApiGroupNamespaceScope: Core K8s API, Namespaced
         deprecatedLabel: (deprecated)
-        resourceOptionInfo: The resource options are not a complete list of every resource available in every Rancher-managed Kubernetes cluster. Resources and API groups may need to be manually entered in advanced use cases.
+        resourceOptionInfo: The resource options are not a complete list of every resource available in every Orion-managed Kubernetes cluster. Resources and API groups may need to be manually entered in advanced use cases.
         tableHeaders:
           verbs: Verbs
           resources: Resource
@@ -5995,7 +5995,7 @@ workload:
     subdomain:
       label: Subdomain
       placeholder: e.g. web
-  normanWarning: It looks like this workload was created in the legacy Rancher UI. You may need to manually delete any services that were automatically created for it.
+  normanWarning: It looks like this workload was created in the legacy Orion UI. You may need to manually delete any services that were automatically created for it.
   validation:
     containers: Containers
     containerImage: Container {name} - "Container Image" is required.
@@ -6292,7 +6292,7 @@ typeDescription:
   #       Should fit on one line.
   #       If you link to anything external, it MUST have
   #       target="_blank" rel="noopener noreferrer nofollow"
-  branding: "Branding allows administrators to globally re-brand the UI by customizing the Rancher product name, logos and color scheme."
+  branding: "Branding allows administrators to globally re-brand the UI by customizing the Orion product name, logos and color scheme."
   chart: "All charts have at least one version that is installable on clusters with Linux and Windows nodes unless otherwise indicated."
   cis.cattle.io.clusterscanbenchmark: A benchmark version is the name of benchmark to run using kube-bench as well as the valid configuration parameters for that benchmark.
   cis.cattle.io.clusterscanprofile: A profile is the configuration for the CIS scan, which is the benchmark versions to use and any specific tests to skip in that benchmark.
@@ -6972,7 +6972,7 @@ advancedSettings:
     'engine-supported-range': 'Semver range for supported Docker engine versions.  Versions which do not satisfy this range will be marked unsupported in the UI.'
     'ingress-ip-domain': 'Wildcard DNS domain to use for automatically generated Ingress hostnames. <ingress-name>.<namespace-name>.<ip address of ingress controller> will be added to the domain.'
     'server-url': 'Default {appName} install url. Must be HTTPS. All nodes in your cluster must be able to reach this.'
-    'system-default-registry': 'Private registry to be used for all Rancher System Container Images. If no value is specified, the default registry for the container runtime is used. For Docker and containerd, the default is `docker.io`.'
+    'system-default-registry': 'Private registry to be used for all Orion System Container Images. If no value is specified, the default registry for the container runtime is used. For Docker and containerd, the default is `docker.io`.'
     'ui-index': 'HTML index location for the Cluster Manager UI.'
     'ui-dashboard-index': 'HTML index location for the {appName} UI.'
     'ui-offline-preferred': 'Controls whether UI assets are served locally by the server container or from the remote URL defined in the ui-index and ui-dashboard-index settings. The `Dynamic` option will use local assets in production builds of {appName}.'
@@ -7132,7 +7132,7 @@ branding:
   directoryName: Brand Asset Directory Name
   logos:
     label: Logo
-    tip: 'Upload a logo to replace the Rancher logo in the top-level navigation header. Image height should be 21 pixels with a max width of 200 pixels. Max file size is 20KB. Accepted formats: JPEG, PNG, SVG.'
+    tip: 'Upload a logo to replace the Orion logo in the top-level navigation header. Image height should be 21 pixels with a max width of 200 pixels. Max file size is 20KB. Accepted formats: JPEG, PNG, SVG.'
     lightPreview: Light Theme Preview
     darkPreview: Dark Theme Preview
     uploadLight: Upload Light Logo
@@ -7140,12 +7140,12 @@ branding:
     useCustom: Use a Custom Logo
   favicon:
     label: Favicon
-    tip: 'Upload an icon to replace the Rancher favicon in the browser tab. Max file size is 20KB'
+    tip: 'Upload an icon to replace the Orion favicon in the browser tab. Max file size is 20KB'
     preview: Favicon Preview
     upload: Upload Favicon
     useCustom: Use a Custom Favicon
   options:
-    default: Default Rancher Theme
+    default: Default Orion Theme
     suse: SUSE Theme
     custom: Define a Custom Theme
   uiPL:
@@ -7240,9 +7240,9 @@ customLinks:
 
 support:
   community:
-    title: SUSE Rancher provides world-class support
+    title: SUSE Orion provides world-class support
     linksTitle: Community Support
-    learnMore: Find out more about SUSE Rancher Support
+    learnMore: Find out more about SUSE Orion Support
     pricing: Contact us for pricing
   subscription:
     haveSupport: Already have support?
@@ -7269,10 +7269,10 @@ support:
       text: We provide tightly defined SLAs, and offer round the clock support options.
     two:
       title: Issue Resolution
-      text: Run SUSE Rancher products with confidence, knowing that the developers who built them are available to quickly resolve issues.
+      text: Run SUSE Orion products with confidence, knowing that the developers who built them are available to quickly resolve issues.
     three:
       title: Troubleshooting
-      text: We focus on uncovering the root cause of any issue, whether it is related to Rancher Labs products, Kubernetes, Docker or your underlying infrastructure.
+      text: We focus on uncovering the root cause of any issue, whether it is related to Orion Labs products, Kubernetes, Docker or your underlying infrastructure.
     four:
       title: Innovate with Freedom
       text: Take advantage of our certified compatibility with a wide range of Kubernetes providers, operating systems, and open source software.
@@ -7284,13 +7284,13 @@ embedding:
 v1ClusterTools:
   monitoring:
     label: Monitoring (Legacy)
-    description: 'Legacy V1 monitoring. V1 Monitoring is deprecated since Rancher 2.5.0. <a target="blank" href="{docsBase}/monitoring-alerting/guides/migrating/">Learn more</a> about the migration steps to V2 Monitoring.'
+    description: 'Legacy V1 monitoring. V1 Monitoring is deprecated since Orion 2.5.0. <a target="blank" href="{docsBase}/monitoring-alerting/guides/migrating/">Learn more</a> about the migration steps to V2 Monitoring.'
   logging:
     label: Logging (Legacy)
-    description: 'Legacy V1 logging. V1 Logging is deprecated since Rancher 2.5.0. <a target="blank" href="{docsBase}/logging/migrating/">Learn more</a> about migrating to V2 Logging.'
+    description: 'Legacy V1 logging. V1 Logging is deprecated since Orion 2.5.0. <a target="blank" href="{docsBase}/logging/migrating/">Learn more</a> about migrating to V2 Logging.'
   istio:
     label: Istio (Legacy)
-    description: 'Legacy V1 Istio. Istio v1.5 has been deprecated since Rancher 2.5.0. <a target="blank" href="{docsBase}/istio/#migrate-from-previous-istio-version">Learn more</a> about migrating to the latest version.'
+    description: 'Legacy V1 Istio. Istio v1.5 has been deprecated since Orion 2.5.0. <a target="blank" href="{docsBase}/istio/#migrate-from-previous-istio-version">Learn more</a> about migrating to the latest version.'
 
 legacy:
   alerts: Alerts

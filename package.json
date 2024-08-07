@@ -1,6 +1,6 @@
 {
   "name": "dashboard",
-  "description": "Rancher Dashboard",
+  "description": "Orion Dashboard",
   "repository": "https://github.com/rancherlabs/dashboard",
   "license": "Apache-2.0",
   "author": "SUSE",
