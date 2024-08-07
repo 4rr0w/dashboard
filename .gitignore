@@ -113,3 +113,4 @@ shell/types/shell
 scripts/standalone/ui
 scripts/standalone/cert
 scripts/standalone/node
+temp-env
